@@ -9,14 +9,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        Layer3 {
-            bindings = <&mo 3>;
-            key-positions = <37 40>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
@@ -51,7 +44,7 @@
 &kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
 &kp LSHFT   &trans        &trans        &trans        &trans        &trans          &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &mo 3     &kp RALT
             >;
         };
 
@@ -76,7 +69,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans            &trans            &trans                &trans             &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &kp LA(LC(LEFT))  &kp LA(LC(DOWN))  &kp LA(LC(UP_ARROW))  &kp LA(LC(RIGHT))  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans            &trans            &trans                &trans             &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp LC(LEFT)      &trans            &kp LC(LG(F))         &kp LC(RIGHT)      &trans  &trans
                         &trans  &trans  &trans    &trans            &trans            &trans
             >;
         };
